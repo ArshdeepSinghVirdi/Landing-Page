@@ -37,15 +37,13 @@ const Nav = () => {
   ];
 
   return (
-    <header className="px-2 py-2  w-full">
-      <nav className="flex justify-between items-center max-container pb-4 max-md:text-xs ">
+    <header className="px-2 py-3  w-full ">
+      <nav className="flex justify-between items-center max-container pb-5 max-md:text-xs ml-10">
         <a
           href="/"
           style={{ border: "1px solid grey", backgroundColor: "#e0e0e0",borderRadius:'2px' }}
-          // className="mr-48"
         >
-          <p data-aos="fade-down" data-aos-delay="110" className="text-coral-red font-bold px-4 py-2">Logo</p>
-          {/* <img src={headerLogo} alt="Logo" width={130} height={29} ></img> */}
+          <p data-aos="fade-down" data-aos-delay="110" className="text-coral-red font-bold px-5 py-2">Logo</p>
         </a>
         <div  data-aos="fade-down" className="flex items-center gap-5">
           <a href='/' className="flex items-center gap-2 px-3 py-2 max-md:hidden bg-coral-red" style={{borderRadius:'1rem', color:'white',boxShadow: '0 4px 6px -1px #FF6F61, 0 2px 4px -1px #FF6F61' }}>
@@ -63,7 +61,7 @@ const Nav = () => {
                 data-aos="zoom-in-up" data-aos-delay="110"
               >
                 <TiMessage />
-                Message
+                Messages
               </a>
             </li>
             <li>
@@ -73,23 +71,13 @@ const Nav = () => {
                 data-aos="zoom-in-up" data-aos-delay="110"
               >
                 <GiReceiveMoney />
-                Payment
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                className="font-montserrat leading-normal text-sm text-slate-gray flex flex-row items-center gap-2 "
-                data-aos="zoom-in-up" data-aos-delay="110"
-              >
-                <IoPeople />
-                Application
+                Payments
               </a>
             </li>
           </ul>
         </div>
 
-        <div className="flex gap-4 text-[2rem]  leading-normal font-medium font-montserrat max-md:hidden wide:mr-24">
+        <div className="flex gap-4 text-[2rem]  leading-normal font-medium font-montserrat max-md:hidden mr-20 wide:mr-24">
           <IoIosNotificationsOutline height={25} width={25} data-aos="fade-down" data-aos-delay="110"/>
           
           <FaCircleUser data-aos="fade-down" data-aos-delay="110"/>
@@ -104,7 +92,7 @@ const Nav = () => {
 
       <hr />
 
-      <ul className="flex-1 flex justify-start items-center gap-16 max-md:hidden px-24 py-2">
+      <ul className="flex-1 flex justify-start items-center gap-16 max-md:hidden px-24 py-2 ">
       {navItems.map((item) => (
         <li key={item.name}>
           <a
@@ -121,7 +109,7 @@ const Nav = () => {
     </ul>
     {isOpen?
       <div className="md:hidden" style={{boxShadow: '0 4px 6px 5px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', borderRadius:'10px'}}>
-        <div className="flex gap-4 text-[2rem] pl-10 leading-normal my-2 font-medium font-montserrat wide:mr-24">
+        <div className="flex gap-4 text-[2rem] pl-4 leading-normal my-2 font-medium font-montserrat mr-20 wide:mr-24">
           <FaCircleUser/>
           <IoIosNotificationsOutline height={25} width={25}/>
         </div>

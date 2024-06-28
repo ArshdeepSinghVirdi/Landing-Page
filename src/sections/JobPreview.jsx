@@ -11,7 +11,7 @@ import { FiMessageSquare } from "react-icons/fi";
 import { FaRegEye } from "react-icons/fa6";
 import { MdDeleteForever } from "react-icons/md";
 import { MdOutlineModeEdit } from "react-icons/md";
-import { FaRegUserCircle } from "react-icons/fa";
+// import { FaRegUserCircle } from "react-icons/fa";
 
 const JobPreview = () => {
   const status = "Open";
@@ -34,19 +34,19 @@ const JobPreview = () => {
   2. Work on researching on latest web application and trends
   3. Work on conceptualising and visualising
   4. Work on creating graphics content 
-  5. Benifits:
+  5. Benefits:
       -  Health insurance 
       -  provident funds
   6. Schedule:
       -  Day shift
-  7. Supplemantal pay types
-      -  performance bonus`;
+  7. Supplemental pay types
+      -  Performance Bonus`;
 
   const JobReach = [
-    { id: 1, name: "Applicant", number:'400',component: <GoPeople /> },
-    { id: 2, name: "Matches",  number:'100',component: <FaUserCheck /> },
-    { id: 3, name: "Messages",  number:'147',component: <FiMessageSquare /> },
-    { id: 3, name: "Views",  number:'800',component: <FaRegEye /> },
+    { id: 1, name: "Applicant", number: "400", component: <GoPeople /> },
+    { id: 2, name: "Matches", number: "100", component: <FaUserCheck /> },
+    { id: 3, name: "Messages", number: "147", component: <FiMessageSquare /> },
+    { id: 3, name: "Views", number: "800", component: <FaRegEye /> },
   ];
 
   return (
@@ -60,21 +60,24 @@ const JobPreview = () => {
       >
         <div className="w-full ">
           <div className="flex w-full gap-6 items-center max-md:flex-col">
-            <h1 className="text-[2.5rem] font-bold leading-[3px]  max-md:text-2xl ">{role}</h1>
+            <h1 className="text-[2.5rem] font-bold leading-[3px]  max-md:text-2xl ">
+              {role}
+            </h1>
             <div className="flex gap-2">
-
-            <h4 className="text-slate-gray text-sm max-md:xs">{postedTime}</h4>
-            <h4
-              className="px-3 py-[2px] text-sm  max-md:xs"
-              style={{
-                border: "1px solid rgb(202, 235, 202)",
-                backgroundColor: "rgb(222, 249, 222)",
-                borderRadius: "1rem",
-                color: "rgb(52, 140, 52)",
-              }}
+              <h4 className="text-slate-gray text-sm max-md:xs">
+                {postedTime}
+              </h4>
+              <h4
+                className="px-3 py-[2px] text-sm  max-md:xs"
+                style={{
+                  border: "1px solid rgb(202, 235, 202)",
+                  backgroundColor: "rgb(222, 249, 222)",
+                  borderRadius: "1rem",
+                  color: "rgb(52, 140, 52)",
+                }}
               >
-              {status}
-            </h4>
+                {status}
+              </h4>
             </div>
           </div>
 
@@ -129,7 +132,7 @@ const JobPreview = () => {
           <hr></hr>
 
           <div className=" text-slate-gray text-sm py-2">About the Job</div>
-          <div className="w-[50%] text-sm font-normal whitespace-pre-line max-md:text-xs">
+          <div className="w-[50%] text-sm font-normal whitespace-pre-line max-md:text-xs leading-relaxed">
             {JobDescription}
           </div>
           <hr className="my-4"></hr>
@@ -183,49 +186,54 @@ const JobPreview = () => {
               </div>
             </div>
           </div>
-        <hr className="mt-4"></hr>
+          <hr className="mt-4"></hr>
         </div>
       </div>
 
       <div className="col-span-2 w-full flex-1 flex-col justify-center items-top  xl:min-h-screen max-md:text-xs">
         <div className="flex w-full justify-evenly font-semibold   ">
-          <a href="/" className="flex items-center gap-2 py-1 px-7 lg:mr-2" style={{border:'1px solid silver', borderRadius:'8px', color:'coral', backgroundColor:'rgb(255, 228, 219)'}}>
-            <MdDeleteForever/>
+          <a
+            href="/"
+            className="flex items-center gap-2 py-1 px-7 lg:mr-2"
+            style={{
+              border: "1px solid silver",
+              borderRadius: "8px",
+              color: "coral",
+              backgroundColor: "rgb(255, 228, 219)",
+            }}
+          >
+            <MdDeleteForever />
             <p>Delete Job</p>
           </a>
-          <a href="/" className="flex items-center gap-2 py-1 px-7 bg-coral-red" style={{border:'1px solid silver', borderRadius:'8px', color:'rgb(255, 228, 219)'}}>
-            <MdOutlineModeEdit/>
+          <a
+            href="/"
+            className="flex items-center gap-2 py-1 px-7 bg-coral-red"
+            style={{
+              border: "1px solid silver",
+              borderRadius: "8px",
+              color: "rgb(255, 228, 219)",
+            }}
+          >
+            <MdOutlineModeEdit />
             <p>Edit Job</p>
           </a>
         </div>
 
-        <div className="w-full" >
-        {JobReach.map((item, index) => (
-          <div
-          key={index}
-          className="mt-1 flex justify-between items-center px-1 
-          gap-1 text-slate-gray text-md my-4 border-b-2 py-4 max-lg:justify-evenly max-md:py-2" 
-          
-          > 
+        <div className="w-full">
+          {JobReach.map((item, index) => (
+            <div
+              key={index}
+              className="mt-1 flex justify-between items-center px-1 
+          gap-1 text-slate-gray text-md my-4 border-b-2 py-4 max-lg:justify-evenly max-md:py-2"
+            >
               <div className="flex items-center gap-1">
                 {item.component}
                 <h2 className="">{item.name}</h2>
               </div>
-                <h1>{item.number}</h1>
-                {/* <hr></hr> */}
-              </div>
-            ))}
-        </div>
-
-        <div className="w-full px-5 py-10 flex-col justify-center gap-2 max-lg:hidden" style={{border:'1px solid #f0f0f0', borderRadius:'1rem',boxShadow: '0 4px 10px -1px rgba(0, 0, 0, 0.1), -4px 0 6px -1px rgba(0, 0, 0, 0.1)'}}>
-          <h1>`A Quote from Atlassian`</h1>
-          <div className="flex  items-center gap-2">
-            <FaRegUserCircle className="text-3xl"/>
-            <div className="text-xs">
-              <h2>Name</h2>
-              <p>Description</p>
+              <h1>{item.number}</h1>
+              {/* <hr></hr> */}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
