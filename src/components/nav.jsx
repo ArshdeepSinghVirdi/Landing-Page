@@ -144,7 +144,7 @@ const Nav = () => {
                 className="font-montserrat leading-normal text-slate-gray flex flex-row items-center gap-2 "
               >
                 <GiReceiveMoney />
-                Payement
+                Payment
               </a>
             </li>
             <li>
